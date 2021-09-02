@@ -43,7 +43,7 @@ function search(event) {
   citySearch(searchInput.value);
   citySearch(city);
 }
-citySearch("Stockholm");
+citySearch("Barcelona");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
