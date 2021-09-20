@@ -51,7 +51,7 @@ searchForm.addEventListener("submit", search);
 function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let description = response.data.weather[0].description;
-
+  let iconElement = document.querySelector("#icon");
   document.querySelector("h2").innerHTML = ` ${temperature}℃ `;
   document.querySelector("#sky").innerHTML = ` ${description}`;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -61,6 +61,12 @@ function displayWeather(response) {
   document.querySelector(
     "#wind"
   ).innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+  
+  console.log(response.data);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showPosition(position) {
@@ -82,3 +88,7 @@ searchCity.addEventListener("submit", search);
 
 let button = document.querySelector("#button");
 button.addEventListener("click", position);
+
+console.log(response.data);
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src",`http://openweathermap.org/img/wn/10d@2x.png`);
