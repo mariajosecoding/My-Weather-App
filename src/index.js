@@ -34,6 +34,7 @@ function citySearch(city) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+////////////SEARCH
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-input");
@@ -48,28 +49,39 @@ citySearch("Barcelona");
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
+let searchCity = document.querySelector("#search-form");
+searchCity.addEventListener("submit", search);
+
+let button = document.querySelector("#button");
+button.addEventListener("click", position);
+
+
+
+/////////////Unit and Location
 function displayWeather(response) {
-  let temperature = Math.round(celsiusTemperature);
+  let temperatureElement = Math.round(response.data.main.temp);
   let description = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
-  document.querySelector("h2").innerHTML = ` ${temperature}`;
+
+  document.querySelector("#temperature").innerHTML = ` ${temperatureElement}`;
   document.querySelector("#sky").innerHTML = ` ${description}`;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector(
-    "#wind"
-  ).innerHTML = `Wind: ${response.data.wind.speed} km/h`;
-  
+  document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `Wind:${response.data.wind.speed} km/h`;
+
+
+
+
+  //////icono
   console.log(response.data);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  celsiusTemperature = response.data.main.temp;
+ 
 }
+
 
 function showPosition(position) {
   let lat = position.coords.latitude;
@@ -85,21 +97,17 @@ function position(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+
+/////////Convertion
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  
   let temperatureElement = document.querySelector("#temperature");
-  let displayFahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  
 }
-
-
-let searchCity = document.querySelector("#search-form");
-searchCity.addEventListener("submit", search);
-
-let button = document.querySelector("#button");
-button.addEventListener("click", position);
-
-let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
