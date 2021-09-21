@@ -51,6 +51,8 @@ h1 {
   font-weight: lighter;
   text-decoration: none;
   
+
+  
 }
 
 .search-form {
@@ -67,5 +69,27 @@ h1 {
   padding-left: 5rem;
 }
 
+
+
+
+.active {
+  color: rgb(104, 250, 231);
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+ text-decoration:none ;
+}
+
+.faren {
+  text-decoration: none;
+  cursor: default;
+  color: rgb(255, 255, 255);
+}
+.faren:hover {
+  text-decoration: none;
+  color: rgb(104, 250, 231);
+}
 
 

@@ -59,7 +59,9 @@ button.addEventListener("click", position);
 
 /////////////Unit and Location
 function displayWeather(response) {
-  let temperatureElement = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+  let temperatureElement = Math.round(celsiusTemperature);
   let description = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
 
@@ -67,7 +69,7 @@ function displayWeather(response) {
   document.querySelector("#sky").innerHTML = ` ${description}`;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind:${response.data.wind.speed} km/h`;
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
 
 
 
@@ -101,13 +103,30 @@ function position(event) {
 /////////Convertion
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   
 }
 
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+
+let celsiusTemperature = null;
+
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
