@@ -28,7 +28,7 @@ h1 {
   padding: 20px;
   margin: 30px auto;
   border-radius: 10px;
-  max-width: 400px;
+  max-width: 450px;
   height: 500px;
   background: linear-gradient(109.6deg, rgb(61, 67, 68) 11.2%, rgb(11, 132, 145) 91.1%);
 }
@@ -99,6 +99,7 @@ h1 {
 text-align: center;
 color: white;
 margin-top: 50px;
+
 }
 .date-forecast{
   opacity: 0.8;
