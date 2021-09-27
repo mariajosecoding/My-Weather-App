@@ -109,8 +109,10 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = ` ${temperatureElement}`;
   document.querySelector("#sky").innerHTML = ` ${description}`;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  document.querySelector("#humidity").innerHTML = `<i class="material-icons">water_drop</i> ${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `<i class="material-icons">air</i>${Math.round(
+    response.data.wind.speed
+  )} km/h`;
 
   getForecast(response.data.coord);
  
