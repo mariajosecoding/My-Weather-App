@@ -37,21 +37,21 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
-        ` <div class="col"> 
+        ` <div class="col-2"> 
               <div class="date-forecast">${formatDay(forecastDay.dt)}</div>
            <img src="http://openweathermap.org/img/wn/${
              forecastDay.weather[0].icon
-           }@2x.png" width="42">
+           }@2x.png" width="42" id="iconForecast">
            <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max"> 
+            <div class="weather-forecast-temperature-max"> 
              ${Math.round(forecastDay.temp.max)}°
-            </span>
-            <span class="weather-forecast-temperature-min"> 
+            </div>
+            <div class="weather-forecast-temperature-min"> 
              ${Math.round(forecastDay.temp.min)}°
-              </span>
+              </div>
            </div>
         </div>
         `;
@@ -109,7 +109,9 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = ` ${temperatureElement}`;
   document.querySelector("#sky").innerHTML = ` ${description}`;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#humidity").innerHTML = `<i class="material-icons">water_drop</i> ${response.data.main.humidity}%`;
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `<i class="material-icons">water_drop</i> ${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `<i class="material-icons">air</i>${Math.round(
     response.data.wind.speed
   )} km/h`;
