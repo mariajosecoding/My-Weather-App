@@ -8,7 +8,43 @@ h1 {
   color: white;
   padding-left: 30px;
   padding-top: 10px;
+
  
+}
+
+.dateTime {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+#city-input {
+  border: none;
+  border-radius: 5px;
+  width: 198px;
+  opacity: 0.2;
+}
+
+#button, #button1 {
+  font-size:20px; 
+  color: rgb(229, 123, 57);
+   border: none; 
+   border-radius: 5px; 
+   background: linear-gradient(109.6deg, rgba(82, 191, 203, 0.4) 100%,rgba(57, 141, 151, 0.671) 100%, rgb(42, 101, 119) 91.1%);
+   width: 40px;
+   display: inline-block;
+   height: 36px;
+   
+}
+
+#button {
+  margin-left: 2px;
+}
+
+#button1 {
+  margin-left: 45px;
 }
 
 
@@ -26,11 +62,13 @@ h1 {
 .weatherApp {
   border: 1px solid #dadde1;
   padding: 20px;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 450px;
-  height: 500px;
+  margin: 10px;
+  border-radius: 60px;
+  max-width: 375px;
+  height: 812px;
   background: linear-gradient(109.6deg, rgb(61, 67, 68) 11.2%, rgb(11, 132, 145) 91.1%);
+  border-width: 20px;
+  border-color: rgb(223, 219, 219);
 }
 
 
@@ -56,11 +94,7 @@ h1 {
   
 }
 
-.search-form {
-  margin-bottom: 30px;
-  padding-left: 25px;
-  
-}
+
 
 .humidityWind{
  list-style: none;

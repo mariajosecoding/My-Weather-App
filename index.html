@@ -13,41 +13,31 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+<script src="https://kit.fontawesome.com/f31e6f5294.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
       <div class="weatherApp">
+        <h3 class="dateTime" id="dateTime"></h3>
         <form id="search-form">
           <div class="row">
-            <div class="col-6 d-flex">
+            <div class="col-6">
               <input
                 id="city-input"
                 type="search"
                 placeholder="Type a city"
                 autofocus="on"
                 autocomplete="off"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                id="input"
-                ;
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
-            </div>
-            <div class="col">
-              <button type="button" class="btn btn-success" id="button">
-                Current
-              </button>
+                class="form-control shadow-sm"/>
+              </div>
+            <div class="col-6"> 
+             <button id="button1"> <i class="fa fa-search"></i></button>
+              <button id="button"> <i class="fas fa-map-marker-alt"></i></button>
             </div>
           </div>
         </form>
         <h1 id="city">City here</h1>
         <ul class="dateSky">
-          <li id="dateTime"></li>
           <li id="sky">Sky here</li>
         </ul>
         <div class="row">
