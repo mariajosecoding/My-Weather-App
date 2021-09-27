@@ -4,8 +4,8 @@
     <title>She Codes Plus</title>
     <meta charset="UTF-8" />
     <link href="src/styles.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  
-   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -13,7 +13,10 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-<script src="https://kit.fontawesome.com/f31e6f5294.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f31e6f5294.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -28,33 +31,43 @@
                 placeholder="Type a city"
                 autofocus="on"
                 autocomplete="off"
-                class="form-control shadow-sm"/>
-              </div>
-            <div class="col-6"> 
-             <button id="button1"> <i class="fa fa-search"></i></button>
-              <button id="button"> <i class="fas fa-map-marker-alt"></i></button>
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-6">
+              <button id="button1"><i class="fa fa-search"></i></button>
+              <button id="button"><i class="fas fa-map-marker-alt"></i></button>
             </div>
           </div>
         </form>
-        <h1 id="city">City here</h1>
-        <ul class="dateSky">
-          <li id="sky">Sky here</li>
-        </ul>
-        <div class="row">
-          <div class="col d-flex">
-            <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" >
-              <h2 id="temperature"> </h2>
-              <span class="units">°C </span>
-                <ul class="humidityWind">
-              <li id="humidity">hu</li>
-              <li id="wind">wi</li>
-            </ul>
-              </div>
-            </div>
-            <div class="weather-forecast" id="forecast"> 
+        <div class="row"> 
+          <div class="col-6"> 
+        <h1 id="city">City here</h1></div>
         </div>
+        <div class="row"> 
+          <div class="col-4">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" />
             </div>
-          </div>
+            <div class="col-8">
+            <span id="temperature"></span>
+            <span id="unidad"> °C </span>
+            </div>
+            </div>
+        <div class="row"> 
+            <div class="col">
+              <div id="sky">Sky here</div>
+            </div>
+          
+          <ul class="humidityWind">
+            <li id="humidity">hu</li>
+            <li id="wind">wi</li>
+          </ul>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+      
+    </div>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
