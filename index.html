@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="weatherApp">
+      <div class="weatherApp" id="weatherApp">
         <h3 class="dateTime" id="dateTime"></h3>
         <form id="search-form">
           <div class="row">
@@ -68,12 +68,11 @@
           </div>
         </div>
         <div class="weather-forecast" id="forecast"></div>
-        <button class="buttonBackgroundPurple">
-        </button>
-        <button class="buttonBackgroundBlue">
-        </button>
-        <button class="buttonBackgroundGreen">
-        </button>
+
+        <button  id="buttonBackgroundPurple" onclick="changeColor (` linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83))`);"></button>
+        <button id="buttonBackgroundGreen" onclick="changeColor (`radial-gradient(circle at 10% 20%, rgb(0, 95, 104) 0%, rgb(15, 156, 168))`);"></button>
+        <button id="buttonBackgroundBlue" onclick="changeColor (`linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)`);"></button>
+        <button id="night" onclick="changeColor" (`)
       </div>
     </div>
     <script src="src/index.js"></script>

@@ -143,5 +143,18 @@ function position(event) {
 citySearch("Barcelona");
 
 
+let changeTheme = document.querySelector("#buttonBackgroundPurple");
+changeTheme.addEventListener("click", background);
+let container = document.getElementById(`container`);
+
+function background(event) {
+  event.preventDefault();
+  container.style.background = randomColor;
+}
 
 
+
+function changeColor(newColor) {
+  var elem = document.getElementById(`weatherApp`);
+  elem.style.background = newColor;
+}

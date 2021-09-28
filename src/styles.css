@@ -77,7 +77,7 @@ padding-left: 120px;
   border-radius: 60px;
   max-width: 375px;
   height: 750px;
-  background: linear-gradient(109.6deg, rgb(61, 67, 68) 11.2%, rgb(11, 132, 145) 91.1%);
+  background: radial-gradient(circle at 10% 20%, rgb(0, 95, 104) 0%, rgb(15, 156, 168));
   border-width: 20px;
   border-color: rgb(223, 219, 219);
 }
@@ -166,7 +166,7 @@ margin-top: 50px;
   color:rgb(229, 123, 57); ;
 }
 
-.buttonBackgroundPurple {
+#buttonBackgroundPurple {
   background:  linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
   width:40px;
   height: 20px;
@@ -177,8 +177,8 @@ margin-top: 50px;
   
 }
 
-.buttonBackgroundBlue {
-  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+#buttonBackgroundGreen {
+  background: radial-gradient(circle at 10% 20%, rgb(0, 95, 104) 0%, rgb(15, 156, 168));
   width:40px;
   height: 20px;
   margin-top: 20px;
@@ -188,8 +188,8 @@ margin-top: 50px;
   
 }
 
-.buttonBackgroundGreen {
-background: linear-gradient(109.6deg, rgb(61, 67, 68) 11.2%, rgb(11, 132, 145) 91.1%);
+#buttonBackgroundBlue {
+background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   width:40px;
   height: 20px;
   margin-top: 20px;
@@ -198,14 +198,17 @@ background: linear-gradient(109.6deg, rgb(61, 67, 68) 11.2%, rgb(11, 132, 145) 9
   border-radius: 8px; 
 }
 
-.buttonBackgroundPurple:hover {
+#buttonBackgroundPurple:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
-.buttonBackgroundBlue:hover {
+#buttonBackgroundBlue:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
-.buttonBackgroundGreen:hover {
+#buttonBackgroundGreen:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
