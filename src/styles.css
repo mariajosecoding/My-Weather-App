@@ -1,7 +1,12 @@
 
-body {
-  font-family:'Times New Roman', Times, serif;
+#backColor {
+ width: 600px;
+ height: 900px;
+background: white;
+padding-top: 30px;
 }
+
+
 
 h1 {
   font-size: 25px;
@@ -60,7 +65,7 @@ h1 {
 
 
 #sky {
-padding-left: 120px;
+padding-left: 110px;
   font-weight: 19px;
   font-size:20px;
   color: rgb(248, 248, 248);
@@ -76,10 +81,10 @@ padding-left: 120px;
   margin: 10px;
   border-radius: 60px;
   max-width: 375px;
-  height: 750px;
+  height: 800px;
   background: radial-gradient(circle at 10% 20%, rgb(0, 95, 104) 0%, rgb(15, 156, 168));
   border-width: 20px;
-  border-color: rgb(223, 219, 219);
+  border-color: rgba(223, 219, 219, 0.733);
 }
 
 
@@ -107,10 +112,7 @@ padding-left: 40px;
   
 }
 
-.material-icons{
-padding-top: 5px;
 
-}
 
 
 .active {
@@ -162,8 +164,9 @@ margin-top: 50px;
   
 }
 
-.material-icons {
-  color:rgb(229, 123, 57); ;
+#water, #air {
+  color:rgb(229, 123, 57) ;
+  padding-top: 5px;
 }
 
 #buttonBackgroundPurple {
@@ -212,3 +215,36 @@ background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   opacity: 0.5;
   cursor: pointer;
 }
+
+#night {
+ background-color: transparent;
+  width:40px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 120px;
+  border: none;
+  border-radius: 8px; 
+  color:rgba(0, 0, 0, 0.486);
+}
+
+#night:hover {
+  opacity: 0.3;
+}
+
+#light {
+ background-color: transparent;
+  width:40px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px; 
+  color: rgba(255, 255, 255, 0.781);
+}
+
+#light:hover {
+  opacity: 0.3;
+}
+
+
+

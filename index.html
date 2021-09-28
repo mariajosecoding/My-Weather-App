@@ -23,6 +23,7 @@
     />
   </head>
   <body>
+    <div id="backColor">
     <div class="container">
       <div class="weatherApp" id="weatherApp">
         <h3 class="dateTime" id="dateTime"></h3>
@@ -72,9 +73,13 @@
         <button  id="buttonBackgroundPurple" onclick="changeColor (` linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83))`);"></button>
         <button id="buttonBackgroundGreen" onclick="changeColor (`radial-gradient(circle at 10% 20%, rgb(0, 95, 104) 0%, rgb(15, 156, 168))`);"></button>
         <button id="buttonBackgroundBlue" onclick="changeColor (`linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%)`);"></button>
-        <button id="night" onclick="changeColor" (`)
+        <div> 
+        <button id="night" onclick="changecolor (`linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%)`);"><i class="material-icons">dark_mode</i></button>
+         <button id="light" onclick="changecolor ('white');"><i class="material-icons">light_mode</i></button>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
+    </div>
   </body>
 </html>

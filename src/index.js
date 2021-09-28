@@ -111,8 +111,8 @@ function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `<i class="material-icons">water_drop</i> ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `<i class="material-icons">air</i>${Math.round(
+  ).innerHTML = `<i id="water" class="material-icons">water_drop</i> ${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `<i id="air" class="material-icons">air</i>${Math.round(
     response.data.wind.speed
   )} km/h`;
 
@@ -156,5 +156,10 @@ function background(event) {
 
 function changeColor(newColor) {
   var elem = document.getElementById(`weatherApp`);
+  elem.style.background = newColor;
+}
+
+function changecolor(newColor) {
+  var elem = document.getElementById(`backColor`);
   elem.style.background = newColor;
 }
